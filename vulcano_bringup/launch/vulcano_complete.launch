@@ -69,6 +69,9 @@
         </node>
 
         <!-- things that come from generic packages, such as the laser sensors, the io module... -->
-        <include file="$(find vulcano_bringup)/launch/vulcano_multimaster.launch" />
+        <!-- <include file="$(find vulcano_bringup)/launch/vulcano_multimaster.launch" /> -->
+        
+        <!-- Ueye Camera for docking -->
+        <include file="$(find vulcano_bringup)/launch/vulcano_docking_camera.launch" />
  
 </launch>
