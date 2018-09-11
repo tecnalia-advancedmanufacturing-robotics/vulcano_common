@@ -2,7 +2,10 @@ moveit_setup_assistant_config:
   URDF:
     package: vulcano_description
     relative_path: robots/vulcano_robot.urdf.xacro
+    xacro_args: "--inorder "
   SRDF:
     relative_path: config/vulcano.srdf
   CONFIG:
-    generated_timestamp: 1481117068
+    author_name: MoveIt Setup Assistant
+    author_email: assistant@moveit.ros.org
+    generated_timestamp: 1536657978
