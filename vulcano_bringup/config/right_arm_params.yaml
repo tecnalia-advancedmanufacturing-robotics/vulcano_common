@@ -5,10 +5,10 @@ hardware_control_loop:
 # Settings for ros_control hardware interface
 hardware_interface:
    joints:
-     - right_arm_shoulder_pan_joint
-     - right_arm_shoulder_lift_joint
-     - right_arm_elbow_joint
-     - right_arm_wrist_1_joint
-     - right_arm_wrist_2_joint
-     - right_arm_wrist_3_joint
+     - shoulder_pan_joint
+     - shoulder_lift_joint
+     - elbow_joint
+     - wrist_1_joint
+     - wrist_2_joint
+     - wrist_3_joint
 
