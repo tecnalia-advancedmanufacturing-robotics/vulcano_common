@@ -6,7 +6,7 @@
 	This package launches all the robot components and includes also some test launch files for laser, etc.
   </description>
 
-  <!-- One maintainer tag required, multiple allowed, one person per tag --> 
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <maintainer email="info@robotnik.eu">Robotnik</maintainer>
 
 
@@ -41,16 +41,18 @@
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>message_runtime</build_depend>
-  <build_depend>std_msgs</build_depend>  
+  <build_depend>std_msgs</build_depend>
   <build_depend>std_srvs</build_depend>
   <build_depend>std_msgs</build_depend>
   <build_depend>tf</build_depend>
-  
+  <build_depend>ur_modern_driver</build_depend>
+
   <run_depend>message_runtime</run_depend>
   <run_depend>std_msgs</run_depend>
   <run_depend>std_srvs</run_depend>
   <run_depend>std_msgs</run_depend>
   <run_depend>tf</run_depend>
+  <run_depend>ur_modern_driver</run_depend>
 
 
 

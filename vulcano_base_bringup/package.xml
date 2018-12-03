@@ -6,7 +6,7 @@
 	This package launches all the robot components and includes also some test launch files for laser, etc.
   </description>
 
-  <!-- One maintainer tag required, multiple allowed, one person per tag --> 
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <maintainer email="info@robotnik.eu">Robotnik</maintainer>
 
 
@@ -40,20 +40,38 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>message_runtime</build_depend>
-  <build_depend>std_msgs</build_depend>  
+  <build_depend>imu_complementary_filter</build_depend>
+  <build_depend>ira_laser_tools</build_depend>
+  <build_depend>joy</build_depend>
+  <build_depend>klithium_battery_manager</build_depend>
+  <build_depend>laser_filters</build_depend>
+  <build_depend>mavros</build_depend>
+  <build_depend>meanwell_inverter</build_depend>
+  <build_depend>robotnik_modbus_io</build_depend>
+  <build_depend>rosbridge_server</build_depend>
+  <build_depend>sicks300</build_depend>
+  <build_depend>std_msgs</build_depend>
   <build_depend>std_srvs</build_depend>
   <build_depend>std_msgs</build_depend>
   <build_depend>tf</build_depend>
-  
+  <build_depend>vulcano_io_managers</build_depend>
+
+  <run_depend>imu_complementary_filter</run_depend>
+  <run_depend>ira_laser_tools</run_depend>
+  <run_depend>joy</run_depend>
+  <run_depend>klithium_battery_manager</run_depend>
+  <run_depend>laser_filters</run_depend>
+  <run_depend>mavros</run_depend>
+  <run_depend>meanwell_inverter</run_depend>
   <run_depend>message_runtime</run_depend>
+  <run_depend>robotnik_modbus_io</run_depend>
+  <run_depend>rosbridge_server</run_depend>
+  <run_depend>sicks300</run_depend>
   <run_depend>std_msgs</run_depend>
   <run_depend>std_srvs</run_depend>
   <run_depend>std_msgs</run_depend>
   <run_depend>tf</run_depend>
-
-
-
+  <run_depend>vulcano_io_managers</run_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
