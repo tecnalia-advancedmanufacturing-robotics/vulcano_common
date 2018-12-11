@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <robot name="vulcano" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="ur_hw_interface" default="hardware_interface/PositionJointInterface"/>
   <xacro:include filename="$(find vulcano_description)/robots/vulcano.urdf.xacro"/>
-  <xacro:vulcano/>
+  <xacro:vulcano ur_hw_interface="$(arg ur_hw_interface)"/>
 </robot>

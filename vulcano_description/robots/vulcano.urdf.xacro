@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="vulcano" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:macro name="vulcano">
+  <xacro:macro name="vulcano" params="ur_hw_interface:=hardware_interface/PositionJointInterface">
     <xacro:property name="PI" value="3.1415926535897931"/>
     <xacro:arg name="joint_limited" default="false"/>
     <!-- ***************** -->
@@ -45,7 +45,7 @@
       <child link="right_arm_base_link"/>
     </joint>
     <!--xacro:ur10_robot prefix="right_arm_" joint_limited="$(arg joint_limited)"/-->
-    <xacro:right_arm_ur10_robot prefix="right_arm_" joint_limited="$(arg joint_limited)"/>
+    <xacro:right_arm_ur10_robot prefix="right_arm_" joint_limited="$(arg joint_limited)" transmission_hw_interface="${ur_hw_interface}"/>
 
     <!-- Fix left arm to torso -->
     <joint name="torso_left_arm_base_joint" type="fixed">
@@ -54,7 +54,7 @@
       <child link="left_arm_base_link"/>
     </joint>
     <!--xacro:ur10_robot prefix="left_arm_" joint_limited="$(arg joint_limited)"/-->
-    <xacro:left_arm_ur10_robot prefix="left_arm_" joint_limited="$(arg joint_limited)"/>
+    <xacro:left_arm_ur10_robot prefix="left_arm_" joint_limited="$(arg joint_limited)" transmission_hw_interface="${ur_hw_interface}"/>
 
 
     <xacro:tube_support prefix="left_arm_ee_" parent="left_arm_ee_link">
