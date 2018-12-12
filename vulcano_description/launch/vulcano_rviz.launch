@@ -2,8 +2,9 @@
 <launch>
 
   <arg name="joint_limited" default="true"/>
+  <arg name="custom_limits" default="false"/>
 
-  <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find vulcano_description)/robots/vulcano_robot.urdf.xacro' joint_limited:=$(arg joint_limited)" />
+  <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find vulcano_description)/robots/vulcano_robot.urdf.xacro' joint_limited:=$(arg joint_limited) custom_limits:=$(arg custom_limits)" />
   <param name="robot_description" command="$(arg urdf_file)" />
 
   <!-- send fake joint values -->
@@ -15,7 +16,7 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
 
   <!-- Show in Rviz   -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find vulcano_description)/launch/vulcano.rviz"/> 
-  
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find vulcano_description)/launch/vulcano.rviz"/>
+
 </launch>
 
