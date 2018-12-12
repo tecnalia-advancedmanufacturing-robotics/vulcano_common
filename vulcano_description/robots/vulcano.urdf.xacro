@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot name="vulcano" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:macro name="vulcano" params="joint_limited:=false custom_limits:=false">
+  <xacro:macro name="vulcano" params="joint_limited:=false custom_limits:=false ur_hw_interface:=hardware_interface/PositionJointInterface">
     <xacro:property name="PI" value="3.1415926535897931"/>
     <!-- ***************** -->
     <!-- Imported elements -->
@@ -48,10 +48,12 @@
         elbow_joint_lower_limit="${-3*pi/4}" elbow_joint_upper_limit="${pi/4}"
         wrist_1_lower_limit="${-pi}" wrist_1_upper_limit="${0}"
         wrist_2_lower_limit="${-pi}" wrist_2_upper_limit="${pi}"
-        wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}"/>
+        wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}"
+        transmission_hw_interface="${ur_hw_interface}"/>
     </xacro:if>
     <xacro:unless value="${custom_limits}">
-      <xacro:right_arm_ur10_robot prefix="right_arm_" joint_limited="${joint_limited}"/>
+      <xacro:right_arm_ur10_robot prefix="right_arm_" joint_limited="${joint_limited}"
+        transmission_hw_interface="${ur_hw_interface}"/>
     </xacro:unless>
 
     <!-- Fix left arm to torso -->
@@ -67,10 +69,12 @@
         elbow_joint_lower_limit="${-pi/4}" elbow_joint_upper_limit="${3*pi/4}"
         wrist_1_lower_limit="${-pi}" wrist_1_upper_limit="${0}"
         wrist_2_lower_limit="${-pi}" wrist_2_upper_limit="${pi}"
-        wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}"/>
+        wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}"
+        transmission_hw_interface="${ur_hw_interface}"/>
     </xacro:if>
     <xacro:unless value="${custom_limits}">
-      <xacro:left_arm_ur10_robot prefix="left_arm_" joint_limited="${joint_limited}"/>
+      <xacro:left_arm_ur10_robot prefix="left_arm_" joint_limited="${joint_limited}"
+        transmission_hw_interface="${ur_hw_interface}"/>
     </xacro:unless>
 
     <xacro:tube_support prefix="left_arm_ee_" parent="left_arm_ee_link">

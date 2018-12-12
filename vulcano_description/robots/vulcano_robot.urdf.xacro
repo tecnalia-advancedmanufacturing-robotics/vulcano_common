@@ -2,6 +2,7 @@
 <robot name="vulcano" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:arg name="joint_limited" default="false"/>
   <xacro:arg name="custom_limits" default="false"/>
+  <xacro:arg name="ur_hw_interface" default="hardware_interface/PositionJointInterface"/>
   <xacro:include filename="$(find vulcano_description)/robots/vulcano.urdf.xacro"/>
-  <xacro:vulcano joint_limited="$(arg joint_limited)" custom_limits="$(arg custom_limits)"/>
+  <xacro:vulcano joint_limited="$(arg joint_limited)" custom_limits="$(arg custom_limits)" ur_hw_interface="$(arg ur_hw_interface)"/>
 </robot>
