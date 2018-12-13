@@ -7,6 +7,10 @@ topics:
   topic   : move_base/cmd_vel
   timeout : 0.5
   priority: 2
+- name    : gui_pad
+  topic   : gui_pad/cmd_vel
+  timeout : 0.5
+  priority: 9
 
 locks:
 - name    : e_stop
