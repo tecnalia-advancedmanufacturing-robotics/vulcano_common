@@ -46,8 +46,8 @@
     <xacro:right_arm_ur10_robot prefix="right_arm_" joint_limited="true"
     shoulder_pan_lower_limit="${0}" shoulder_pan_upper_limit="${PI}"
     shoulder_lift_lower_limit="${-5*PI/4}" shoulder_lift_upper_limit="${-PI/4}"
-    elbow_joint_lower_limit="${-3*PI/4}" elbow_joint_upper_limit="${PI/4}"
-    wrist_1_lower_limit="${-3*PI/4}" wrist_1_upper_limit="${PI/4}"
+    elbow_joint_lower_limit="${-PI}" elbow_joint_upper_limit="${0}"
+    wrist_1_lower_limit="${-PI/2}" wrist_1_upper_limit="${PI/2}"
     wrist_2_lower_limit="${-PI}" wrist_2_upper_limit="${PI}"
     wrist_3_lower_limit="${-PI}" wrist_3_upper_limit="${PI}"/>
   </xacro:if>
@@ -65,7 +65,7 @@
     <xacro:left_arm_ur10_robot prefix="left_arm_" joint_limited="true"
     shoulder_pan_lower_limit="${-PI}" shoulder_pan_upper_limit="${0}"
     shoulder_lift_lower_limit="${-3*PI/4}" shoulder_lift_upper_limit="${PI/4}"
-    elbow_joint_lower_limit="${-PI/4}" elbow_joint_upper_limit="${3*PI/4}"
+    elbow_joint_lower_limit="${0}" elbow_joint_upper_limit="${PI}"
     wrist_1_lower_limit="${-5*PI/4}" wrist_1_upper_limit="${-PI/4}"
     wrist_2_lower_limit="${-PI}" wrist_2_upper_limit="${PI}"
     wrist_3_lower_limit="${-PI}" wrist_3_upper_limit="${PI}"/>
